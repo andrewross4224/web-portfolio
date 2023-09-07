@@ -1,0 +1,154 @@
+:root {
+    --light-gray: rgb(143, 143, 143);
+    --dark-gray: rgb(49, 49, 49);
+}
+
+* { 
+    background-color: var(--dark-gray);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* header flex setup */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--light-gray);
+}
+/* making nav extend to end of page */
+nav {
+    background-color: var(--light-gray);
+}
+/* nav bar anchor values */
+nav a {
+    display: inline-flex;
+    background-color: var(--light-gray);
+    color: black;
+    font-size: 19px;
+    padding: 24px;
+}
+/* black bars around options in nav bar */
+#navborder {
+    border-left: solid;
+    border-right: solid;
+}
+/* My name */
+header h1 {
+    margin-left: 30px;
+    font-size: 50px;
+    background-color: var(--light-gray);
+    color: black;
+}
+/* Picture of Me */
+#profileIMG {
+    border: 50px solid transparent;
+    border-top: 50px solid var(--light-gray);
+    border-left: 50px solid var(--light-gray);
+}
+/* Banner encased by picture border */
+#banner {
+    background-image: url(../images/web-port-banner.jpg);
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    margin-left: 484px;
+    clip-path: polygon(50px 0%, 3000px 0, 3000px 50%, 0 50%);
+}
+/* possitioning to center about me text */
+.container {
+    position: relative;
+}
+/* styling for about me text */
+#aboutme {
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 535px;
+    background-color: transparent;
+}
+/* styleing for paragraph box */
+#aboutmeparagraph {
+    display: inline;
+    position: absolute;
+    margin-top: 70px;
+    margin-right: 50px;
+    color: white;
+    width: 550px;
+    height: 430px;
+}
+/* paragraph list items */
+.aboutmeli {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#projectsflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#projectsflex h2 {
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 40px;
+    border-bottom: 2px solid white;
+}
+
+#mainproject {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    rotate: 1deg;
+    padding: 4%;
+    margin: 2%;
+    width: 100%;
+}
+
+#mainproject img {
+    border: 5px solid var(--light-gray);
+}
+
+.maincard {
+    width: fit-content;
+    margin-top: -100px;
+    background-color: var(--light-gray);
+}
+
+div h3 {
+    font-size: 100%;
+    background-color: var(--light-gray);
+    padding: .05%;
+    display: block;
+}
+
+#secondaryprojects {
+    display: flex;
+    flex-direction: column;
+    rotate: -1deg;
+    padding: 4%;
+    margin: 2%;
+    width: 50%;
+}
+
+#secondaryprojects img {
+    border: 3px solid var(--light-gray);
+}
+
+.secondarycard {
+    width: 50%;
+    margin-top: -60px;
+    background-color: var(--light-gray);
+}
+
+div h4 {
+    font-size: 75%;
+    background-color: var(--light-gray);
+    padding: 1%;
+    display: block;
+}

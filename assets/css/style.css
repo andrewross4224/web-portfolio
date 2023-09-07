@@ -7,15 +7,15 @@
     background-color: var(--dark-gray);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/* scroll settings for nav bar */
+html {
+    scroll-behavior: smooth;
+}
 /* header flex setup */
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: var(--light-gray);
-}
-/* making nav extend to end of page */
-nav {
     background-color: var(--light-gray);
 }
 /* nav bar anchor values */
@@ -26,11 +26,13 @@ nav a {
     font-size: 19px;
     padding: 24px;
 }
-/* black bars around options in nav bar */
-#navborder {
-    border-left: solid;
-    border-right: solid;
+/* transition for nav bar */
+nav a:hover {
+    background-color: var(--dark-gray);
+    color: white;
+    transition: 1.5s;
 }
+
 /* My name */
 header h1 {
     margin-left: 30px;
@@ -58,6 +60,10 @@ header h1 {
 .container {
     position: relative;
 }
+
+#aboutmemobile {
+    display: none;
+}
 /* styling for about me text */
 #aboutme {
     font-size: 25px;
@@ -83,23 +89,30 @@ header h1 {
     margin-left: 20px;
     margin-top: 15px;
 }
-
+/* centering projects within page */
+#projects {
+    text-align: -webkit-center;
+}
+/* flex setting for all project space */
 #projectsflex {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    max-width: 1100px;
 }
-
+/* center setting for project title */
 #projectsflex h2 {
     display: flex;
     justify-content: center;
+    width: 80%;
     margin: 80px;
     margin-bottom: 20px;
     color: white;
     font-size: 40px;
     border-bottom: 2px solid white;
 }
-
+/* div id for main project */
 #mainproject {
     display: flex;
     flex-direction: column;
@@ -109,46 +122,181 @@ header h1 {
     margin: 2%;
     width: 100%;
 }
-
+/* image settings for main project */
 #mainproject img {
     border: 5px solid var(--light-gray);
+    align-self: center;
 }
 
+#mainproject:hover .maincard,
+#mainproject:hover div h3 {
+    background-color: var(--dark-gray);
+    color: white;
+    transition: 1.5s;
+}
+
+#mainproject:hover img {
+    border: 5px solid var(--dark-gray);
+    transition: 1.5s;
+}
+/* tag for main project */
 .maincard {
     width: fit-content;
     margin-top: -100px;
     background-color: var(--light-gray);
 }
-
+/* text for tag main project */
 div h3 {
     font-size: 100%;
     background-color: var(--light-gray);
     padding: .05%;
     display: block;
 }
-
-#secondaryprojects {
-    display: flex;
-    flex-direction: column;
-    rotate: -1deg;
-    padding: 4%;
-    margin: 2%;
-    width: 50%;
-}
-
-#secondaryprojects img {
-    border: 3px solid var(--light-gray);
-}
-
-.secondarycard {
-    width: 50%;
-    margin-top: -60px;
-    background-color: var(--light-gray);
-}
-
+/* text for tag secondary projects */
 div h4 {
     font-size: 75%;
     background-color: var(--light-gray);
     padding: 1%;
     display: block;
+    width: fit-content;
+}
+/* flex settings for secondary project */
+#secondaryprojects {
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    margin: 2%;
+    width: 40%;
+}
+/* angles for image tilt */
+.angleright {
+    rotate: 1deg;
+}
+
+.angleleft {
+    rotate: -1deg;
+}
+/* image settings for secondary projects */
+#secondaryprojects img {
+    border: 3px solid var(--light-gray);
+}
+/* hover transition for secondary project cards */
+#secondaryprojects:hover .secondarycard,
+#secondaryprojects:hover div h4 {
+    background-color: var(--dark-gray);
+    color: white;
+    transition: 1.5s;
+}
+
+#secondaryprojects:hover img {
+    border: 3px solid var(--dark-gray);
+    transition: 1.5s;
+}
+/* secondary project cards */
+.secondarycard {
+    width: 50%;
+    margin-top: -60px;
+    background-color: var(--light-gray);
+    margin-left: -10px;
+}
+/* flex settings for contact me footer */
+#footer {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2%;
+    justify-content: center;
+}
+/* link settings for footer */
+footer a {
+    padding: 1%;
+    white-space: nowrap;
+    background-color: var(--light-gray);
+}
+/* contact me title for footer */
+footer h2 {
+    padding: 1%;
+    padding-right: 3%;
+    background-color: var(--light-gray);
+    border-right: 2px solid black;
+}
+/* hover settings for contact info */
+footer a:hover {
+    background-color: var(--dark-gray);
+    color: white;
+    transition: 1.5s;
+}
+
+/* tablet sizing */
+@media screen and (max-width: 960px) {
+/* getting rid of banner and about me */
+    .container {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+        background-color: var(--light-gray);
+    }
+    
+    header h1 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+    }
+/* showing new about me under picture */
+    #aboutmemobile {
+        display: block;
+        font-size: 25px;
+        color: white;
+        background-color: transparent;
+        text-align: center;
+        margin-top: 4%;
+        border-bottom: 2px solid white;
+    }
+/* reformat about me p so it doesnt wrap pictures */
+    #aboutmeparagraph {
+        display: block;
+        position: relative;
+        text-align: center;
+        margin: 1.5%;
+        margin-top: 70px;
+        margin-right: 0px;
+        color: white;
+        width: 370px;
+    }
+/* centering whole screen */
+    #mobilearticle {
+        text-align: -webkit-center;
+    }
+}
+/* mobile sizing */
+@media  screen and (max-width:680px) {
+/* changing contact me to be column */
+    #footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer h2 {
+        padding-right: 0%;
+        border-right: none;
+        border-bottom: 2px solid var(--dark-gray);
+    }
+
+    header{
+        justify-content: center;
+        padding-bottom: 3px;
+        margin-bottom: -1px;
+    }
+/* changing nav to be column */
+    nav a {
+        padding: 10px;
+        display: block;
+        white-space: nowrap;
+        width: 300px;
+        text-align: center;
+        border: 2px solid var(--dark-gray);
+    }
 }

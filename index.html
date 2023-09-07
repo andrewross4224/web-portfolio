@@ -14,23 +14,24 @@
         <h1>Andrew Ross</h1>
         <nav>
             <!-- Nav links -->
-            <a id="navborder">About me</a>
-            <a>Projects</a>
-            <a id="navborder">Contact me</a>
-            <a>Resume</a>
+            <a href="#aboutme">About me</a>
+            <a href="#projects">Projects</a>
+            <a href="#footer">Contact me</a>
+            <a href="./assets/Andrew Resume.pdf" download="">Resume</a>
         </nav>
     </header>
 
 <main>
 <!-- Images and About me Section -->
-<article>
+<article id="mobilearticle">
     <!-- Banner for About me -->
     <div class="container">
         <figure id="banner" role="img" aria-label="Gray banner next to profile picture"></figure>
         <h2 id="aboutme">About Me</h2>
     </div>
     <!-- About me -->
-        <img id="profileIMG" src="./assets/images/profile.jpg" alt="Picture of me">
+    <img id="profileIMG" src="./assets/images/profile.jpg" alt="Picture of me">
+    <h2 id="aboutmemobile">About Me</h2>
     <div id="aboutmeparagraph">   
         <p> Hi! My name is Andrew Ross. I am currently in bootcamp at UCF learning front-end back-end website development. I am doing this because I have always 
         been passionate about technology and computers, and would love to be able to have a career writing code. For now I am an assistant manager at Discount
@@ -47,31 +48,47 @@
     </div>
 </article>
 <!-- Projects -->
-<article>
+<article id="projects">
     <section id="projectsflex">
         <h2>Projects</h2>
-
+<!-- main project card -->
         <div id="mainproject">
-            <img src="./assets/images/Horiseon.png" alt="Horiseon website refactor">
+            <a href="https://andrewross4224.github.io/Module-1-Homework/"><img src="./assets/images/Horiseon.png" alt="Horiseon website refactor"></a>
             <div class="maincard">
                 <h3 id="mainprojecttext">Horiseon code refactor</h3>
                 <h3 id="mainprojecttext">HTML & CSS</h3>
             </div>
         </div>
-
-        <div id="secondaryprojects">
-            <img src="./assets/images/preworkstudyguide.png" alt="Prework study guide">
+<!-- secondary project card -->
+        <div id="secondaryprojects" class="angleleft">
+            <a href="https://andrewross4224.github.io/prework-study-guide/"><img src="./assets/images/preworkstudyguide.png" alt="Prework study guide"></a>
             <div class="secondarycard">
                 <h4>Prework study guide</h4>
                 <h4>HTML, CSS, JavaScript</h4>
             </div>
         </div>
-
-        <div id="secondaryprojects">
-            <img src="./assets/images/preworkstudyguide.png" alt="Prework study guide">
+<!-- placeholder cards for future projects -->
+        <div id="secondaryprojects" class="angleleft">
+            <img src="./assets/images/Placeholder.png" alt="Prework study guide">
             <div class="secondarycard">
-                <h4>Prework study guide</h4>
-                <h4>HTML, CSS, JavaScript</h4>
+                <h4>PlaceHolder</h4>
+                <h4>PlaceHolder</h4>
+            </div>
+        </div>
+
+        <div id="secondaryprojects" class="angleright">
+            <img src="./assets/images/Placeholder.png" alt="Prework study guide">
+            <div class="secondarycard">
+                <h4>PlaceHolder</h4>
+                <h4>PlaceHolder</h4>
+            </div>
+        </div>
+
+        <div id="secondaryprojects" class="angleright">
+            <img src="./assets/images/Placeholder.png" alt="Prework study guide">
+            <div class="secondarycard">
+                <h4>PlaceHolder</h4>
+                <h4>PlaceHolder</h4>
             </div>
         </div>
         
@@ -79,13 +96,13 @@
 </article>
 
 </main>
-
-<footer>
+<!-- contact me info with links -->
+<footer id="footer">
     <h2>Contact me</h2>
     <a>andrew.ross4224@gmail.com</a>
     <a>720-394-5304</a>
-    <a>github</a>
-    <a>linkdin</a>
+    <a href="https://github.com/andrewross4224">Github</a>
+    <a href="https://www.linkedin.com/in/andrew-ross-83b34b243/">Linkedin</a>
 </footer>
  
 </body>
